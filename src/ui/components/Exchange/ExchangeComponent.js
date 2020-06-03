@@ -37,12 +37,12 @@ class ExchangeComponent extends Component {
 			<div className='rate'>
 				<h1>Курс обмена валют</h1>
 				<h3>на {this.state.date}</h3>
-				<div className="flex-container">
+				<div className="d-flex flex-row justify-content-between">
 					{Object.keys(this.state.currencyRate).map((keyName, i) => (
-						<div className="block flex-item" key={keyName}>
+						<div className="table-bordered p-1" key={keyName}>
 							<div className="currency-name">{keyName}</div>
-							<div className="currency-in">{this.state.currencyRate[keyName].toFixed(2)} *</div>
-							<p>* за 1 EUR</p>
+							<div className="currency-in">{this.state.currencyRate[keyName].toFixed(2)} <span className='text-danger'>*</span></div>
+							<p className='text-disc text-muted'><span className='text-danger'>*</span> за 1 EUR</p>
 						</div>
 					))}
 

@@ -31,16 +31,16 @@ class CalcComponent extends Component {
 			<div className='calculator'>
 				<h3>Калькулятор обмена</h3>
 				<div className="block">
-					<div>Укажите сумму и требуемую валюту</div>
+					<div className='mb-2 text-muted'>Укажите сумму и требуемую валюту</div>
 					<div>
-						<form onSubmit={this.calcRate}>
-							<input type="number" defaultValue='150' name='current-currency'/>
-							<select name="type-currency" id="">
+						<form className='form-group' onSubmit={this.calcRate}>
+							<input className='form-control col-5 d-inline-block mr-1' type="number" placeholder='Сумма обмена' name='current-currency'/>
+							<select className='form-control col-5 d-inline-block mb-1' name="type-currency" id="">
 								{Object.keys(this.props.rate).map((keyName, i) => (
 									<option key={keyName} value={keyName}>{keyName}</option>
 								))}
 							</select>
-							<input type="submit" defaultValue='calc'/>
+							<button className='btn btn-success' type="submit" defaultValue='calc'>Обмен</button>
 						</form>
 					</div>
 					<h4>Результат</h4>
