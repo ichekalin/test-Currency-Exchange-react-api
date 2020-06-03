@@ -1,2 +1,2 @@
 # Test APP - Currency Exchange (react + api)
-https://ichekalin.github.io/test-Currency-Exchange-react-api/
+https://test-app--currency-exchange.web.app/
